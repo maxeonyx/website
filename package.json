@@ -11,7 +11,7 @@
   "license": "UNLICENSED",
   "private": true,
   "scripts": {
-    "dev": "sergey --watch",
-    "build": "sergey"
+    "build": "sergey --root=./src/ --imports=./ --content=./ --output=../public/",
+    "dev": "npm run build -- --watch"
   }
 }
