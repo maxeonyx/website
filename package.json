@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "sass": "^1.25.0",
     "sergey": "^0.0.13"
   },
   "name": "maxeonyx-website",
@@ -11,7 +12,9 @@
   "license": "UNLICENSED",
   "private": true,
   "scripts": {
-    "build": "sergey --root=./src/ --imports=./ --content=./ --output=../public/",
-    "dev": "npm run build -- --watch"
+    "build-html": "sergey --root=./html/ --imports=. --content=. --output=../public/",
+    "dev-html": "sergey --root=./html/ --imports=. --content=. --output=../public/ --watch",
+    "build-styles": "sass ./styles/main.scss ./html/main.css",
+    "dev-styles": "sass ./styles/main.scss ./html/main.css --watch"
   }
 }

@@ -1,0 +1,68 @@
+@use "reset.scss";
+
+@use "layout.scss";
+
+body {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 400;
+}
+
+nav {
+    font-size: 2em;
+    color: white;
+    text-shadow: 0px 2px 5px black;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 600;
+}
+
+.picture {
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 3px 5px 5px;
+}
+
+.background {
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    z-index: -200;
+    background-image: url(/images/dark-gray.png);
+}
+.sash {
+    $origin-x: 150px;
+    $origin-y: 100px;
+
+    $width: 300px;
+    $length: 6000px;
+
+    top: -$origin-y;
+    left: -$origin-x;
+
+    transform-origin: $origin-x $origin-y;
+
+    transform: rotate(-65deg);
+
+    position: fixed;
+    width: $width;
+    height: $length;
+    z-index: -100;
+    background-image: url(/images/orange.png);
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 3px 5px 10px;
+}
+
+main {
+    padding: 30px;
+    background-image: url(/images/pale.png);
+    background-color: rgba(40, 40, 40, 1);
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 3px 5px 5px;
+}
+
+main h1 {
+    margin-top: 0;
+}
+
+a.active {
+    text-decoration: underline;
+}

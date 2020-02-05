@@ -13,24 +13,22 @@
 <body>
     <div class="background"></div>
     <div class="sash"></div>
-    <div class="overlay">
-        <header>
-            <nav>
-                <a href="/">HOME</a>
-                <a href="/cv">CV</a>
-                <a href="/projects">PROJECTS</a>
-                <a href="/blog">BLOG</a>
-            </nav>
-        </header>
+    <div class="layout">
+        <nav>
+            <sergey-link to="/">HOME</sergey-link>
+            <sergey-link to="/cv/">CV</sergey-link>
+            <sergey-link to="/projects/">PROJECTS</sergey-link>
+            <sergey-link to="/blog/">BLOG</sergey-link>
+        </nav>
+        <div class="content">
+            <main>
+                <sergey-slot />
+            </main>
+        </div>
         <img class="picture" src="/images/me.png" />
         <footer>
             Maxwell Clarke, maxeonyx@gmail.com, 2020
         </footer>
-    </div>
-    <div class="content">
-        <main>
-            <sergey-slot />
-        </main>
     </div>
     <script src="/main.js"></script>
     <sergey-slot name="scripts" />
