@@ -1,0 +1,17 @@
+{
+  "dependencies": {
+    "sergey": "^0.0.13"
+  },
+  "name": "maxeonyx-website",
+  "version": "1.0.0",
+  "description": "My personal website",
+  "main": "src/index.html",
+  "repository": "https://github.com/maxeonyx/website",
+  "author": "Maxwell Clarke (Maxeonyx) <maxeonyx@gmail.com>",
+  "license": "UNLICENSED",
+  "private": true,
+  "scripts": {
+    "dev": "sergey --watch",
+    "build": "sergey"
+  }
+}
