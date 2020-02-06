@@ -72,7 +72,7 @@ main {
   padding-bottom: 30px;
   padding-top: 30px;
   grid-template-columns: 1fr minmax(0px, 250px) 300px minmax(0px, 250px) 1fr;
-  grid-template-rows: 5rem auto 30px 300px;
+  grid-template-rows: auto auto 30px 300px;
   grid-template-areas:
     ". head head head ."
     ". main main main ."
@@ -82,6 +82,7 @@ main {
 
 nav {
   display: flex;
+  padding-bottom: 30px;
   justify-content: space-around;
 }
 
@@ -101,6 +102,7 @@ nav {
   }
   nav {
     flex-direction: column;
+    align-items: center;
   }
 }
 </style>
