@@ -11,8 +11,8 @@
       <main>
         <slot />
       </main>
+      <Sash />
     </div>
-    <Sash />
   </div>
 </template>
 
@@ -31,11 +31,11 @@ body {
   font-family: "Source Sans Pro", sans-serif;
   font-weight: 400;
   background-image: url(/images/dark-gray.png);
+  overflow-y: scroll;
 }
 
 .body-inner {
   height: 100%;
-  width: 100%;
 }
 
 .scrollable {
@@ -68,11 +68,13 @@ main {
 }
 
 .layout {
+  position: relative;
+  min-height: 100%;
   display: grid;
   padding-bottom: 30px;
   padding-top: 30px;
   grid-template-columns: 1fr minmax(0px, 250px) 300px minmax(0px, 250px) 1fr;
-  grid-template-rows: auto auto 30px 300px;
+  grid-template-rows: auto 1fr 30px 300px;
   grid-template-areas:
     ". head head head ."
     ". main main main ."
@@ -84,6 +86,10 @@ nav {
   display: flex;
   padding-bottom: 30px;
   justify-content: space-around;
+
+  a.active--exact {
+    text-decoration: underline white 3px;
+  }
 }
 
 @media (min-width: 1390px) {
@@ -93,7 +99,7 @@ nav {
     padding-left: 30px;
     padding-right: 30px;
     grid-template-columns: 300px 30px 1000px 1fr;
-    grid-template-rows: 300px 30px auto auto;
+    grid-template-rows: 300px 30px auto 1fr;
     grid-template-areas:
       "pict .    main ."
       ".    .    main ."
@@ -102,7 +108,7 @@ nav {
   }
   nav {
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
   }
 }
 </style>

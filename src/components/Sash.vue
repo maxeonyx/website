@@ -9,9 +9,9 @@
   top: 0;
   left: 0;
   z-index: -100;
-  position: absolute;
   width: 100%;
   height: 100%;
+  position: absolute;
   overflow: hidden;
 }
 
@@ -27,7 +27,7 @@
 
   transform-origin: $origin-x $origin-y;
 
-  transform: rotate(-65deg);
+  transform: rotate(-55deg);
   position: absolute;
 
   width: $width;
