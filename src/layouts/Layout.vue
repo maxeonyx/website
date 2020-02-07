@@ -26,6 +26,7 @@ query {
 
 <style lang="scss">
 @import "./reset.scss";
+@import "./vars.scss";
 
 body {
   font-family: "Source Sans Pro", sans-serif;
@@ -55,7 +56,7 @@ nav {
   height: 100%;
   width: 100%;
 
-  border-radius: 10px;
+  border-radius: $border-radius;
   box-shadow: rgba(0, 0, 0, 0.4) 0px 3px 5px 5px;
 }
 
@@ -63,7 +64,7 @@ main {
   grid-area: main;
   padding: 30px;
   background-image: url(/images/pale.png);
-  border-radius: 10px;
+  border-radius: $border-radius;
   box-shadow: rgba(0, 0, 0, 0.4) 0px 3px 5px 5px;
 }
 
