@@ -37,11 +37,31 @@ body {
   padding-bottom: 30px;
   padding-top: 30px;
   grid-template-columns: 1fr minmax(0px, 250px) 300px minmax(0px, 250px) 1fr;
-  grid-template-rows: auto 1fr 300px;
+  grid-template-rows: auto 30px 1fr 300px;
   grid-template-areas:
     ".    head head head .   "
+    ".    .    .    .    .   "
     ".    main main main .   "
     ".    .    pict .    .   ";
+}
+
+$layout-breakpoint: calc(30px + 300px + 30px + 800px + 30px);
+
+@media (min-width: $layout-breakpoint) {
+  .layout {
+    grid-template-columns:
+      minmax(30px, 1fr) 300px minmax(30px, 1fr) minmax(0px, 250px) 300px minmax(
+        0px,
+        250px
+      )
+      4fr;
+    grid-template-rows: min-content 30px 300px auto;
+    grid-template-areas:
+      ". .    .    head head head ."
+      ". .    .    .    .    .    ."
+      ". pict .    main main main ."
+      ". .    .    main main main .";
+  }
 }
 
 .picture {
@@ -56,7 +76,6 @@ body {
 main {
   grid-area: main;
   padding: 30px;
-  margin-top: 30px;
   margin-bottom: 30px;
   background-color: white;
   // background-image: url(/images/pale.png);
