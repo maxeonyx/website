@@ -1,7 +1,7 @@
 <template>
   <div class="layout">
     <Nav />
-    <g-image class="picture" src="/images/me.png" width="300px" />
+    <g-image class="picture" src="/images/me.png" width="300px" height="300px" />
     <slot />
     <Sash />
   </div>
@@ -17,7 +17,8 @@ query {
 
 <style lang="scss">
 @import "./reset.scss";
-@import "./vars.scss";
+
+$border-radius: 2px;
 
 :root {
   background-color: hsl(0, 0, 14);
