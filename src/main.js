@@ -9,5 +9,9 @@ export default function (Vue, { router, head, isClient }) {
   head.link.push({
     rel: "stylesheet",
     href: "https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600&display=swap",
+  });
+  head.link.push({
+    rel: "stylesheet",
+    href: "https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css",
   })
 }

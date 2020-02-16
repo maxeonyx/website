@@ -6,5 +6,15 @@
 
 module.exports = {
   siteName: 'Maxwell Clarke',
-  plugins: []
-}
+  plugins: [{
+    use: '@gridsome/source-filesystem',
+    options: {
+      path: 'content/**/*.md',
+    },
+  }],
+  transformers: {
+    remark: {
+      autolinkHeadings: false,
+    },
+  },
+};
