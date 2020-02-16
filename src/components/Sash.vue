@@ -17,12 +17,17 @@
 .sash {
   $width: 200px;
 
-  // provably longer than the viewport diagonal
-  $length: 300%;
+  // 142% should be enough because at 45 degrees the diagonal will hit the bottom at sqrt(2)*page height.
+  // however this is just for the centreline so we need a bit more because the sash has width.
+  $length: calc(142% + 200px);
 
-  transform: translateX(-50%) translateY(-50%) // center origin on top left
-    translateX(50vw) translateY(50vw) // translate to center of viewport
-    rotate(-45deg); // rotate around center
+  // move the sash so the centerline is on the top left corner of the viewport
+  top: -30px;
+  left: -100px;
+  // make the transform origin the top left corner
+  transform-origin: 100px 30px;
+
+  transform: rotate(-45deg); // rotates around top left corner of screen
   position: absolute;
 
   width: $width;
