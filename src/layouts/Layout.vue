@@ -21,8 +21,8 @@ query {
 $border-radius: 2px;
 
 :root {
-  background-color: hsl(0, 0, 14);
-  background-image: url(/images/dark-gray.png);
+  background-color: hsl(0, 0, 6);
+  background-image: url(/images/noise-dark-gray.png);
 }
 
 body {
@@ -79,7 +79,7 @@ main {
   padding: 30px;
   margin-bottom: 30px;
   background-color: white;
-  // background-image: url(/images/pale.png);
+  background-image: url(/images/noise-white.png);
   border-radius: $border-radius;
   box-shadow: rgba(0, 0, 0, 0.4) 0px 3px 5px 5px;
 }

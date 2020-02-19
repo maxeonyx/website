@@ -30,8 +30,8 @@
 
   width: $width;
   height: $length;
-  background-color: hsl(25, 90, 40);
-  background-image: url(/images/orange.png);
+  background-color: rgb(00, 48, 158);
+  background-image: url(/images/noise-blue.png);
   box-shadow: rgba(0, 0, 0, 0.4) 0px 3px 5px 10px;
 }
 </style>
