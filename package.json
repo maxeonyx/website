@@ -11,7 +11,7 @@
   "license": "UNLICENSED",
   "private": true,
   "scripts": {
-    "build-html": "sergey --root=./src/ --imports=. --content=. --output=../public/",
-    "dev-html": "sergey --root=./src/ --imports=. --content=. --output=../public/ --watch"
+    "build-html": "sergey --root=./src/ --imports=imports --content=content --output=../public/",
+    "dev-html": "sergey --root=./src/ --imports=imports --content=content --output=../public/ --watch"
   }
 }

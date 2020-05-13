@@ -1,169 +1,206 @@
 /* === reset === */
+
 html {
-    box-sizing: border-box;
-  }
-  
-  *, *:before, *:after {
-    box-sizing: inherit;
-  }
-  
-  html,
-  body {
-      width: 100%;
-      height: 100%;
-      padding: 0;
-      margin: 0;
-  }
-  
-  a {
-      text-decoration: none;
-      color: inherit;
-  }
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
 /* === end reset === */
 
+/* === content === */
+h1,
+h2,
+h3,
+h4 {
+  font-weight: 400;
+}
+/* === end content === */
+
 /* === layout === */
-.layout {
-    width: 100%;
-    height: 100%;
-    position: fixed;
+
+:root {
+  background-color: rgb(251, 251, 251);
+  background-image: url(/images/noise-white.png);
+  /*
+  background-color: rgb(62, 62, 62);
+  background-image: url(/images/noise-dark-gray.png);
+  */
 }
-
-.layout {
-    display: grid;
-    grid-gap: 30px;
-    grid-template-columns: 1fr 300px 1fr;
-    grid-template-rows: 5em auto 300px 5em;
-    grid-template-areas:
-        "head head head"
-        "main main main"
-        ".    pict .   "
-        "foot foot foot";
-}
-
-@media (min-width: 1200px) {
-
-    .layout {
-        padding-left: 30px;
-    }
-
-    /* same grid used by scrollable content and non-scrollable overlay. It's a bit of a hack. */
-    .layout {
-        display: grid;
-        grid-gap: 30px;
-        grid-template-columns: 1fr 300px 1fr 1000px;
-        grid-template-rows: 30px 10em 300px auto 5em 30px;
-        grid-template-areas:
-            ".    .    .    .   "
-            "head head head main"
-            ".    pict .    main"
-            ".    .    .    main"
-            "foot foot foot main"
-            ".    .    .    .   ";
-    }
-}
-
-
-.picture {
-    height: 100%;
-    width: 100%;
-    grid-area: pict;
-}
-
-
-nav {
-    grid-area: head;
-    display: grid;
-    grid-gap: 30px;
-    grid-template-columns: 1fr 1fr;
-}
-
-footer {
-    grid-area: foot;
-}
-
-.content {
-    grid-area: main;
-
-}
-/* === end layout === */
 
 body {
-    font-family: 'Source Sans Pro', sans-serif;
-    font-weight: 400;
+  font-family: sans-serif;
+  font-weight: 400;
+  overflow-y: scroll;
 }
 
-nav {
-    font-size: 2em;
-    color: white;
-    text-shadow: 0px 2px 5px black;
+.layout {
+  position: relative;
+  min-height: 100%;
+  display: grid;
+  padding-bottom: 30px;
+  padding-top: 30px;
+  grid-template-columns: 1fr minmax(0px, 250px) 300px minmax(0px, 250px) 1fr;
+  grid-template-rows: auto 30px 1fr 300px;
+  grid-template-areas: ".    head head head .   " ".    .    .    .    .   " ".    main main main .   " ".    .    pict .    .   ";
 }
 
-h1, h2, h3, h4, h5, h6 {
-    font-weight: 600;
+/* $layout-breakpoint: calc(30px + 300px + 30px + 800px + 30px); */
+
+@media (min-width: 1190px) {
+  .layout {
+    grid-template-columns:
+      minmax(30px, 1fr) 300px minmax(30px, 1fr) minmax(0px, 250px)
+      300px minmax(0px, 250px) 4fr;
+    grid-template-rows: min-content 30px 300px auto;
+    grid-template-areas: ". .    .    head head head ." ". .    .    .    .    .    ." ". pict .    main main main ." ". .    .    main main main .";
+  }
 }
 
 .picture {
-    border-radius: 10px;
-    box-shadow: rgba(0, 0, 0, 0.4) 0px 3px 5px 5px;
-}
-
-.background {
-    height: 100%;
-    width: 100%;
-    position: fixed;
-    z-index: -200;
-    background-image: url(/images/dark-gray.png);
-}
-.sash {
-    /* 
-    $width: 300px;
-    $length: 6000px;
-
-    $origin-x: $width / 2;
-    $origin-y: 100px;
-
-    top: -$origin-y;
-    left: -$origin-x;
-
-    transform-origin: $origin-x $origin-y;
-
-    transform: rotate(-65deg);
-
-    position: fixed;
-    width: $width;
-    height: $length;
-    z-index: -100;
-    background-image: url(/images/orange.png);
-    box-shadow: rgba(0, 0, 0, 0.4) 0px 3px 5px 10px;
-    */
-    
-    top: -100px;
-    left: -150px;
-
-    transform-origin: 150px 100px;
-
-    transform: rotate(-65deg);
-
-    position: fixed;
-    width: 300px;
-    height: 6000px;
-    z-index: -100;
-    background-image: url(/images/orange.png);
-    box-shadow: rgba(0, 0, 0, 0.4) 0px 3px 5px 10px;
+  grid-area: pict;
+  height: 100%;
+  width: 100%;
+  border-radius: 2px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 20px 20px,
+    rgba(0, 0, 0, 0.3) 0px 1px 2px 2px;
+  background-color: rgb(62, 62, 62);
+  background-image: url(/images/noise-dark-gray.png);
 }
 
 main {
-    padding: 30px;
-    background-image: url(/images/pale.png);
-    background-color: rgba(40, 40, 40, 1);
-    border-radius: 10px;
-    box-shadow: rgba(0, 0, 0, 0.4) 0px 3px 5px 5px;
+  grid-area: main;
+  padding: 30px;
+  margin-bottom: 30px;
+  background-color: rgb(251, 251, 251);
+  background-image: url(/images/noise-white.png);
+  border-radius: 2px;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 1px 20px 20px,
+    rgba(0, 0, 0, 0.05) 0px 1px 3px 3px;
 }
 
-main h1 {
-    margin-top: 0;
+nav {
+  grid-area: head;
 }
 
-a.active {
-    text-decoration: underline;
+/* === end layout === */
+
+/* === nav === */
+
+nav {
+  color: black;
+  font-size: 2rem;
+  text-shadow: rgba(0, 0, 0, 0.2) 2px 3px 5px;
 }
+
+nav .active--exact {
+  text-decoration: underline 3px;
+}
+
+nav {
+  display: grid;
+  grid-template-areas: "home projects" "cv blog";
+  grid-gap: 15px;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+nav .home {
+  grid-area: home;
+  text-align: left;
+}
+
+nav .projects {
+  grid-area: projects;
+  text-align: right;
+}
+
+nav .cv {
+  grid-area: cv;
+  text-align: left;
+}
+
+nav .blog {
+  grid-area: blog;
+  text-align: right;
+}
+
+@media (min-width: 600px) {
+  nav {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+}
+
+/* === end nav === */
+
+/* === sash === */
+
+.sash-wrapper {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  overflow: hidden;
+  z-index: -100;
+}
+
+/*
+  .sash {
+    $width: 200px;
+  
+    // 142% should be enough because at 45 degrees the diagonal will hit the bottom at sqrt(2)*page height.
+    // however this is just for the centreline so we need a bit more because the sash has width.
+    $length: calc(142% + 200px);
+  
+    // move the sash so the centerline is on the top left corner of the viewport
+    top: -30px;
+    left: -100px;
+    // make the transform origin the top left corner
+    transform-origin: 100px 30px;
+  
+    transform: rotate(-45deg); // rotates around top left corner of screen
+    position: absolute;
+  
+    width: $width;
+    height: $length;
+    background-color: rgb(00, 48, 158);
+    background-image: url(/images/noise-blue.png);
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 20px 20px,
+      rgba(0, 0, 0, 0.2) 0px 0px 4px 4px;
+  }
+*/
+
+.sash {
+  top: -30px;
+  left: -100px;
+  transform-origin: 100px 30px;
+  transform: rotate(-45deg);
+  position: absolute;
+  width: 200px;
+  height: calc(142% + 200px);
+  background-color: rgb(0, 41, 202);
+  background-image: url(/images/noise-blue.png);
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 20px 20px,
+    rgba(0, 0, 0, 0.3) 0px 0px 2px 2px;
+}
+
+/* === end sash === */
