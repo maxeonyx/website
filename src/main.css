@@ -37,15 +37,41 @@ h4 {
 /* === layout === */
 
 :root {
-  background-color: rgb(251, 251, 251);
-  background-image: url(/images/noise-white.png);
-  /*
-  background-color: rgb(62, 62, 62);
-  background-image: url(/images/noise-dark-gray.png);
-  */
+  --sash-color: #1030d0;
+  --sash-image: url(/images/noise-blue.png);
+
+  /* light mode */
+  /* used for empty background */
+  --bg-dark-color: #f3f3f3;
+  --bg-dark-image: url(/images/noise-light-gray.png);
+  /* used for the main */
+  --bg-light-color: #fafafa;
+  --bg-light-image: url(/images/noise-white.png);
+  /* used for sash and picture */
+  --shadow-strong: rgba(0, 0, 0, 0.1) 0px 0px 20px 20px,
+    rgba(0, 0, 0, 0.3) 0px 0px 2px 2px;
+  /* used for main */
+  --shadow-weak: rgba(0, 0, 0, 0.05) 0px 1px 20px 20px,
+    rgba(0, 0, 0, 0.05) 0px 1px 3px 3px;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    color: rgb(229, 229, 229);
+    --bg-dark-color: #141517;
+    --bg-dark-image: url(/images/noise-really-dark-gray.png);
+    --bg-light-color: #30333b;
+    --bg-light-image: url(/images/noise-dark-gray.png);
+    --shadow-strong: rgba(0, 0, 0, 0.3) 0px 0px 20px 20px,
+      rgba(0, 0, 0, 0.3) 0px 0px 2px 2px;
+    --shadow-weak: rgba(0, 0, 0, 0.15) 0px 1px 20px 20px,
+      rgba(0, 0, 0, 0.15) 0px 1px 3px 3px;
+  }
 }
 
 body {
+  background-color: var(--bg-dark-color);
+  background-image: var(--bg-dark-image);
   font-family: sans-serif;
   font-weight: 400;
   overflow-y: scroll;
@@ -79,21 +105,18 @@ body {
   height: 100%;
   width: 100%;
   border-radius: 2px;
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 20px 20px,
-    rgba(0, 0, 0, 0.3) 0px 1px 2px 2px;
-  background-color: rgb(62, 62, 62);
-  background-image: url(/images/noise-dark-gray.png);
+  box-shadow: var(--shadow-strong);
+  background-color: #a2a5a6;
 }
 
 main {
   grid-area: main;
   padding: 30px;
   margin-bottom: 30px;
-  background-color: rgb(251, 251, 251);
-  background-image: url(/images/noise-white.png);
   border-radius: 2px;
-  box-shadow: rgba(0, 0, 0, 0.05) 0px 1px 20px 20px,
-    rgba(0, 0, 0, 0.05) 0px 1px 3px 3px;
+  box-shadow: var(--shadow-weak);
+  background-color: var(--bg-light-color);
+  background-image: var(--bg-light-image);
 }
 
 nav {
@@ -105,12 +128,11 @@ nav {
 /* === nav === */
 
 nav {
-  color: black;
   font-size: 2rem;
   text-shadow: rgba(0, 0, 0, 0.2) 2px 3px 5px;
 }
 
-nav .active--exact {
+nav [aria-current="page"] {
   text-decoration: underline 3px;
 }
 
@@ -197,10 +219,9 @@ nav .blog {
   position: absolute;
   width: 200px;
   height: calc(142% + 200px);
-  background-color: rgb(0, 41, 202);
-  background-image: url(/images/noise-blue.png);
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 20px 20px,
-    rgba(0, 0, 0, 0.3) 0px 0px 2px 2px;
+  box-shadow: var(--shadow-strong);
+  background-color: var(--sash-color);
+  background-image: var(--sash-image);
 }
 
 /* === end sash === */

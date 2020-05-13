@@ -3,7 +3,7 @@
     "sergey": "^0.0.13"
   },
   "name": "maxeonyx-website",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "My personal website",
   "main": "src/index.html",
   "repository": "https://github.com/maxeonyx/website",
@@ -11,7 +11,7 @@
   "license": "UNLICENSED",
   "private": true,
   "scripts": {
-    "build-html": "sergey --root=./src/ --imports=imports --content=content --output=../public/",
-    "dev-html": "sergey --root=./src/ --imports=imports --content=content --output=../public/ --watch"
+    "build": "sergey --root=./src/ --imports=imports --content=content --exclude=content --output=../public/",
+    "dev": "sergey --root=./src/ --imports=imports --content=content --exclude=content --output=../public/ --watch"
   }
 }
