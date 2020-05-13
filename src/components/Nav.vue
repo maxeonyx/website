@@ -9,12 +9,12 @@
 
 <style lang="scss">
 nav {
-  color: white;
+  color: black;
   font-size: 2rem;
-  text-shadow: 0px 2px 5px black;
+  text-shadow: rgba(0, 0, 0, 0.1) 0px 2px 5px;
 
   .active--exact {
-    text-decoration: underline white 3px;
+    text-decoration: underline 3px;
   }
 }
 

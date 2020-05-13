@@ -22,7 +22,7 @@ $border-radius: 2px;
 
 :root {
   background-color: hsl(0, 0, 6);
-  background-image: url(/images/noise-dark-gray.png);
+  background-image: url(/images/noise-white.png);
 }
 
 body {
@@ -71,7 +71,8 @@ $layout-breakpoint: calc(30px + 300px + 30px + 800px + 30px);
   width: 100%;
 
   border-radius: $border-radius;
-  box-shadow: rgba(0, 0, 0, 0.4) 0px 3px 5px 5px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 20px 20px,
+    rgba(0, 0, 0, 0.4) 0px 0px 4px 4px;
 }
 
 main {
@@ -81,7 +82,8 @@ main {
   background-color: white;
   background-image: url(/images/noise-white.png);
   border-radius: $border-radius;
-  box-shadow: rgba(0, 0, 0, 0.4) 0px 3px 5px 5px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 20px 20px,
+    rgba(0, 0, 0, 0.2) 0px 0px 4px 4px;
 }
 
 nav {

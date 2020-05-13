@@ -32,6 +32,7 @@
   height: $length;
   background-color: rgb(00, 48, 158);
   background-image: url(/images/noise-blue.png);
-  box-shadow: rgba(0, 0, 0, 0.4) 0px 3px 5px 10px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 20px 20px,
+    rgba(0, 0, 0, 0.2) 0px 0px 4px 4px;
 }
 </style>
