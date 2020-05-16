@@ -18,11 +18,6 @@ body {
   margin: 0;
 }
 
-a {
-  text-decoration: none;
-  color: inherit;
-}
-
 /* === end reset === */
 
 /* === content === */
@@ -127,7 +122,9 @@ nav {
 
 /* === nav === */
 
-nav {
+nav a {
+  text-decoration: none;
+  color: inherit;
   font-size: 2rem;
   text-shadow: rgba(0, 0, 0, 0.2) 2px 3px 5px;
 }
@@ -138,7 +135,7 @@ nav [aria-current="page"] {
 
 nav {
   display: grid;
-  grid-template-areas: "home projects" "cv blog";
+  grid-template-areas: "home blog";
   grid-gap: 15px;
   padding-left: 30px;
   padding-right: 30px;
