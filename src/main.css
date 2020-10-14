@@ -50,19 +50,19 @@ h4 {
     rgba(0, 0, 0, 0.05) 0px 1px 3px 3px;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    color: rgb(229, 229, 229);
-    --bg-dark-color: #141517;
-    --bg-dark-image: url(/images/noise-really-dark-gray.png);
-    --bg-light-color: #30333b;
-    --bg-light-image: url(/images/noise-dark-gray.png);
-    --shadow-strong: rgba(0, 0, 0, 0.3) 0px 0px 20px 20px,
-      rgba(0, 0, 0, 0.3) 0px 0px 2px 2px;
-    --shadow-weak: rgba(0, 0, 0, 0.15) 0px 1px 20px 20px,
-      rgba(0, 0, 0, 0.15) 0px 1px 3px 3px;
-  }
+/* @media (prefers-color-scheme: dark) { */
+:root {
+  color: rgb(229, 229, 229);
+  --bg-dark-color: #141517;
+  --bg-dark-image: url(/images/noise-really-dark-gray.png);
+  --bg-light-color: #30333b;
+  --bg-light-image: url(/images/noise-dark-gray.png);
+  --shadow-strong: rgba(0, 0, 0, 0.3) 0px 0px 20px 20px,
+    rgba(0, 0, 0, 0.3) 0px 0px 2px 2px;
+  --shadow-weak: rgba(0, 0, 0, 0.15) 0px 1px 20px 20px,
+    rgba(0, 0, 0, 0.15) 0px 1px 3px 3px;
 }
+/* } */
 
 body {
   background-color: var(--bg-dark-color);
@@ -135,28 +135,30 @@ nav [aria-current="page"] {
 
 nav {
   display: grid;
-  grid-template-areas: "home blog";
+  grid-template-areas:
+    "home blog"
+    ".    cv";
   grid-gap: 15px;
   padding-left: 30px;
   padding-right: 30px;
 }
 
-nav .home {
+nav .home-link {
   grid-area: home;
   text-align: left;
 }
 
-nav .projects {
+nav .projects-link {
   grid-area: projects;
   text-align: right;
 }
 
-nav .cv {
+nav .cv-link {
   grid-area: cv;
-  text-align: left;
+  text-align: right;
 }
 
-nav .blog {
+nav .blog-link {
   grid-area: blog;
   text-align: right;
 }
