@@ -21,206 +21,147 @@ body {
 /* === end reset === */
 
 /* === content === */
-h1,
-h2,
-h3,
-h4 {
-  font-weight: 400;
+
+p {
+  margin-top: 1rem;
 }
+
+h1 {
+  letter-spacing: 1px;
+}
+
 /* === end content === */
 
 /* === layout === */
 
 :root {
-  --sash-color: #1030d0;
-  --sash-image: url(/images/noise-blue.png);
-
   /* light mode */
+  color: #000;
+  --h2-color: #007bff;
+  --h3-color: #666;
   /* used for empty background */
   --bg-dark-color: #f3f3f3;
-  --bg-dark-image: url(/images/noise-light-gray.png);
+  /* --bg-dark-image: url(/images/noise-light-gray.png); */
   /* used for the main */
-  --bg-light-color: #fafafa;
-  --bg-light-image: url(/images/noise-white.png);
+  --bg-light-color: #fff;
+  --btn-color: #eaeaea;
+  --btn-hover-color: #dadada;
+  /* --bg-light-image: url(/images/noise-white.png); */
   /* used for sash and picture */
   --shadow-strong: rgba(0, 0, 0, 0.1) 0px 0px 20px 20px,
     rgba(0, 0, 0, 0.3) 0px 0px 2px 2px;
   /* used for main */
   --shadow-weak: rgba(0, 0, 0, 0.05) 0px 1px 20px 20px,
     rgba(0, 0, 0, 0.05) 0px 1px 3px 3px;
+
+  font-family: "source sans pro", sans-serif;
 }
 
-/* @media (prefers-color-scheme: dark) { */
-:root {
-  color: rgb(229, 229, 229);
-  --bg-dark-color: #141517;
-  --bg-dark-image: url(/images/noise-really-dark-gray.png);
-  --bg-light-color: #30333b;
-  --bg-light-image: url(/images/noise-dark-gray.png);
-  --shadow-strong: rgba(0, 0, 0, 0.3) 0px 0px 20px 20px,
-    rgba(0, 0, 0, 0.3) 0px 0px 2px 2px;
-  --shadow-weak: rgba(0, 0, 0, 0.15) 0px 1px 20px 20px,
-    rgba(0, 0, 0, 0.15) 0px 1px 3px 3px;
+a {
+  color: rgb(30, 45, 175);
 }
-/* } */
+a:visited {
+  color: rgb(118, 46, 185);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    color: #ccc;
+    --h2-color: #39b0ff;
+    --h3-color: #999;
+    --bg-dark-color: #141517;
+    --bg-light-color: #1e2024;
+    --btn-color: #141517;
+    --btn-hover-color: #000;
+    --shadow-strong: rgba(207, 20, 20, 0.3) 0px 0px 20px 20px,
+      rgba(0, 0, 0, 0.3) 0px 0px 2px 2px;
+    --shadow-weak: rgba(0, 0, 0, 0.15) 0px 1px 20px 20px,
+      rgba(0, 0, 0, 0.15) 0px 1px 3px 3px;
+  }
+
+  b {
+    color: #fff;
+  }
+
+  a {
+    color: rgb(166, 186, 252);
+  }
+  a:visited {
+    color: rgb(255, 197, 255);
+  }
+}
 
 body {
   background-color: var(--bg-dark-color);
-  background-image: var(--bg-dark-image);
-  font-family: sans-serif;
   font-weight: 400;
   overflow-y: scroll;
 }
 
 .layout {
-  position: relative;
-  min-height: 100%;
-  display: grid;
-  padding-bottom: 30px;
-  padding-top: 30px;
-  grid-template-columns: 1fr minmax(0px, 250px) 300px minmax(0px, 250px) 1fr;
-  grid-template-rows: auto 30px 1fr 300px;
-  grid-template-areas: ".    head head head .   " ".    .    .    .    .   " ".    main main main .   " ".    .    pict .    .   ";
-}
-
-/* $layout-breakpoint: calc(30px + 300px + 30px + 800px + 30px); */
-
-@media (min-width: 1190px) {
-  .layout {
-    grid-template-columns:
-      minmax(30px, 1fr) 300px minmax(30px, 1fr) minmax(0px, 250px)
-      300px minmax(0px, 250px) 4fr;
-    grid-template-rows: min-content 30px 300px auto;
-    grid-template-areas: ". .    .    head head head ." ". .    .    .    .    .    ." ". pict .    main main main ." ". .    .    main main main .";
-  }
-}
-
-.picture {
-  grid-area: pict;
-  height: 100%;
-  width: 100%;
-  border-radius: 2px;
-  box-shadow: var(--shadow-strong);
-  background-color: #a2a5a6;
-}
-
-main {
-  grid-area: main;
+  max-width: 1190px;
+  margin: auto;
   padding: 30px;
-  margin-bottom: 30px;
-  border-radius: 2px;
+
   box-shadow: var(--shadow-weak);
   background-color: var(--bg-light-color);
   background-image: var(--bg-light-image);
 }
 
-nav {
-  grid-area: head;
+@media print {
+  .layout {
+    box-shadow: none;
+    padding: 0;
+  }
+}
+
+main {
+  grid-area: main;
+  max-width: 850px;
+  margin: auto;
+}
+
+.actions {
+  width: 100%;
+  height: 50px;
+
+  padding-top: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+@media print {
+  .actions {
+    display: none;
+  }
+}
+
+.action {
+  margin-left: 10px;
+  padding: 10px;
+  border-radius: 4px;
+  background-color: var(--btn-color);
+  vertical-align: bottom;
+}
+
+a.action {
+  text-decoration: none;
+  color: inherit;
+}
+
+.action:hover {
+  background-color: var(--btn-hover-color);
+  cursor: pointer;
+}
+
+.action > svg {
+  display: inline;
+  vertical-align: bottom;
+  height: 20px;
+  width: 20px;
+  fill: currentColor;
 }
 
 /* === end layout === */
-
-/* === nav === */
-
-nav a {
-  text-decoration: none;
-  color: inherit;
-  font-size: 2rem;
-  text-shadow: rgba(0, 0, 0, 0.2) 2px 3px 5px;
-}
-
-nav [aria-current="page"] {
-  text-decoration: underline 3px;
-}
-
-nav {
-  display: grid;
-  grid-template-areas:
-    "home blog"
-    ".    cv";
-  grid-gap: 15px;
-  padding-left: 30px;
-  padding-right: 30px;
-}
-
-nav .home-link {
-  grid-area: home;
-  text-align: left;
-}
-
-nav .projects-link {
-  grid-area: projects;
-  text-align: right;
-}
-
-nav .cv-link {
-  grid-area: cv;
-  text-align: right;
-}
-
-nav .blog-link {
-  grid-area: blog;
-  text-align: right;
-}
-
-@media (min-width: 600px) {
-  nav {
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    justify-content: space-between;
-  }
-}
-
-/* === end nav === */
-
-/* === sash === */
-
-.sash-wrapper {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  overflow: hidden;
-  z-index: -100;
-}
-
-/*
-  .sash {
-    $width: 200px;
-  
-    // 142% should be enough because at 45 degrees the diagonal will hit the bottom at sqrt(2)*page height.
-    // however this is just for the centreline so we need a bit more because the sash has width.
-    $length: calc(142% + 200px);
-  
-    // move the sash so the centerline is on the top left corner of the viewport
-    top: -30px;
-    left: -100px;
-    // make the transform origin the top left corner
-    transform-origin: 100px 30px;
-  
-    transform: rotate(-45deg); // rotates around top left corner of screen
-    position: absolute;
-  
-    width: $width;
-    height: $length;
-    background-color: rgb(00, 48, 158);
-    background-image: url(/images/noise-blue.png);
-    box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 20px 20px,
-      rgba(0, 0, 0, 0.2) 0px 0px 4px 4px;
-  }
-*/
-
-.sash {
-  top: -30px;
-  left: -100px;
-  transform-origin: 100px 30px;
-  transform: rotate(-45deg);
-  position: absolute;
-  width: 200px;
-  height: calc(142% + 200px);
-  box-shadow: var(--shadow-strong);
-  background-color: var(--sash-color);
-  background-image: var(--sash-image);
-}
-
-/* === end sash === */

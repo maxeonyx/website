@@ -15,21 +15,21 @@
 
   <body>
     <div class="layout">
-      <div class="sash-wrapper">
-        <div class="sash"></div>
+      <div class="actions">
+        <div class="action print">
+          <sergey-import src="icons/print.svg" />
+          Print
+        </div>
+        <a class="action download" href="/maxwell-clarke.pdf">
+          <sergey-import src="icons/download.svg" />
+          PDF
+        </a>
       </div>
-      <img class="picture" src="/images/me.png" width="300px" height="300px" />
-      <nav>
-        <sergey-link to="/" class="home-link">HOME</sergey-link>
-        <!-- <sergey-link to="/projects/" class="projects-link">PROJECTS</sergey-link> -->
-        <sergey-link to="/blog/" class="blog-link">BLOG</sergey-link>
-        <sergey-link to="/cv/" class="cv-link">CV</sergey-link>
-      </nav>
       <main>
         <sergey-slot />
       </main>
     </div>
-    <script src="/main.js"></script>
+    <script src="main.js"></script>
     <sergey-slot name="scripts" />
   </body>
 </html>
