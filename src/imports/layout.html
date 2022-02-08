@@ -15,16 +15,7 @@
 
   <body>
     <div class="layout">
-      <div class="actions">
-        <div class="action print">
-          <sergey-import src="icons/print.svg" />
-          Print
-        </div>
-        <a class="action download" href="/maxwell-clarke.pdf">
-          <sergey-import src="icons/download.svg" />
-          PDF
-        </a>
-      </div>
+      <sergey-slot name="actions" />
       <main>
         <sergey-slot />
       </main>
