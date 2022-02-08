@@ -48,14 +48,11 @@ h1 {
   --btn-hover-color: #dadada;
   /* --bg-light-image: url(/images/noise-white.png); */
   /* used for sash and picture */
-  --shadow-strong: rgba(0, 0, 0, 0.1) 0px 0px 20px 20px,
-    rgba(0, 0, 0, 0.3) 0px 0px 2px 2px;
+  --shadow-strong: rgba(0, 0, 0, 0.1) 0px 0px 20px 20px, rgba(0, 0, 0, 0.3) 0px 0px 2px 2px;
   /* used for main */
-  --shadow-weak: rgba(0, 0, 0, 0.05) 0px 1px 20px 20px,
-    rgba(0, 0, 0, 0.05) 0px 1px 3px 3px;
-    --shadow-btn: rgba(0, 0, 0, 0.05) 0px 2px 8px 8px,
-     rgba(0, 0, 0, 0.05) 0px 2px 3px 3px,
-     rgba(0, 0, 0, 0.1) 0px 1px 1px 1px;
+  --shadow-weak: rgba(0, 0, 0, 0.05) 0px 1px 20px 20px, rgba(0, 0, 0, 0.05) 0px 1px 3px 3px;
+  --shadow-btn: rgba(0, 0, 0, 0.05) 0px 2px 8px 8px, rgba(0, 0, 0, 0.05) 0px 2px 3px 3px,
+    rgba(0, 0, 0, 0.1) 0px 1px 1px 1px;
 
   font-family: "source sans pro", sans-serif;
 }
@@ -76,10 +73,8 @@ a:visited {
     --bg-light-color: #1e2024;
     --btn-color: #141517;
     --btn-hover-color: #000;
-    --shadow-strong: rgba(20, 20, 20, 0.3) 0px 0px 20px 20px,
-      rgba(0, 0, 0, 0.3) 0px 0px 2px 2px;
-    --shadow-weak: rgba(0, 0, 0, 0.15) 0px 1px 20px 20px,
-      rgba(0, 0, 0, 0.15) 0px 1px 3px 3px;
+    --shadow-strong: rgba(20, 20, 20, 0.3) 0px 0px 20px 20px, rgba(0, 0, 0, 0.3) 0px 0px 2px 2px;
+    --shadow-weak: rgba(0, 0, 0, 0.15) 0px 1px 20px 20px, rgba(0, 0, 0, 0.15) 0px 1px 3px 3px;
   }
 
   b {
@@ -102,6 +97,7 @@ body {
 
 .layout {
   max-width: 1190px;
+  min-height: 100%;
   margin: auto;
   padding: 30px;
 
