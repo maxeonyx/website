@@ -1,0 +1,112 @@
+<sergey-import src="blog-layout-layout">
+  <sergey-template name="seo">
+    <title><sergey-slot name="title" /> | Maxwell Clarke</title>
+  </sergey-template>
+  <sergey-template name="head">
+    <style>
+      :root {
+        --h2-color: #0860bd;
+        --h3-color: rgb(41, 41, 41);
+      }
+
+      main {
+        min-height: calc(100vh - 15em);
+      }
+
+      h1 {
+        font-size: 1.7rem;
+        margin-top: 2em;
+        margin-bottom: 2em;
+        text-align: center;
+        vertical-align: middle;
+      }
+
+      h2,
+      h3 {
+        margin-top: 1em;
+        margin-bottom: 1em;
+        font-size: 1.3rem;
+        font-weight: 600;
+        min-width: 150px;
+        break-after: avoid;
+      }
+
+      h2 {
+        color: var(--h2-color);
+        text-transform: uppercase;
+        letter-spacing: 1px;
+      }
+
+      h3 {
+        color: var(--h3-color);
+      }
+
+      .subtitle {
+        text-align: center;
+        margin-bottom: 2em;
+      }
+
+      main img {
+        width: 100%;
+      }
+
+      a.noborder {
+        border: none !important;
+      }
+
+      main a {
+        color: inherit;
+        text-decoration: none;
+        border-bottom: 2px solid;
+        color: rgb(11, 20, 104);
+        border-color:  rgb(30, 45, 175);
+        border-radius: 3px;
+      }
+
+      main a:hover {
+        border-top: 2px solid;
+      }
+
+      main a:visited {
+        color: rgb(66, 16, 112);
+        border-color: rgb(118, 46, 185);
+      }
+
+      .article-meta {
+        margin-top: 2em;
+        text-align: center;
+      }
+
+      blockquote {
+        margin: 0;
+        padding-left: 1.5em;
+        border-left: 2px solid black;
+        border-radius: 4px;
+      }
+    </style>
+    <sergey-slot name="head" />
+  </sergey-template>
+
+  <article>
+    <h1><sergey-slot name="title" /></h1>
+    <div class="flex"><p class="subtitle"><sergey-slot name="subtitle" /></p></div>
+    
+    <!-- ============ main content here =========== -->
+    <sergey-slot />
+    <!-- ========================================== -->
+
+  </article>
+
+  <sergey-template name="footer">
+    <div class="flex article-meta">
+      <sergey-slot name="published" />
+      <sergey-slot name="last-updated" />
+    </div>
+    <div class="flex social-media">
+      <a href="https://twitter.com/maxeonyx">
+        <sergey-import src="icons/twitter.svg" />
+        <span>@maxeonyx</span>
+      </a>
+    </div>
+  </sergey-template>
+</sergey-import>
