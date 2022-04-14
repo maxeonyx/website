@@ -1,4 +1,4 @@
-<sergey-import src="layout">
+<sergey-import src="cv-layout">
   <sergey-template name="seo">
     <title>Maxwell Clarke</title>
   </sergey-template>
@@ -23,11 +23,12 @@
   <section class="indent gap">
     <h2>Background</h2>
     <div>
-      <p>I'm currently a Master's student at Victoria University, Wellington, New Zealand.</p>
-      <p>
-        I am doing a thesis in machine learning &mdash; training and applying
+      <p>I'm currently a Master's student doing a thesis in machine learning &mdash; training and applying
         <a href="https://en.wikipedia.org/wiki/Transformer_(machine_learning_model)">transformer</a>
-        models using <a href="https://www.tensorflow.org/">TensorFlow</a>. In my free time, I build
+        models.
+      </p>
+      <p>
+        In my free time, I build
         <a href="https://github.com/maxeonyx/kal">my own programming language</a>
         using <a href="https://www.rust-lang.org/">Rust</a>, go rock climbing, and dabble in
         <a href="https://maxeonyx.itch.io/">game development</a> with the
@@ -37,8 +38,59 @@
         I am involved in
         <a href="https://www.effectivealtruism.org/">Effective Altruism</a>, a social movement which asks how
         we can do the most good for the world with our resources. I want to use my career to help solve the
-        world's most pressing problems.
+        world's most pressing problems, especially the <a href="https://intelligence.org/stanford-talk/">AI
+          Alignment</a> problem.
       </p>
+    </div>
+  </section>
+
+  <section class="gap">
+    <h2>Projects</h2>
+    <div>
+      <section class="indent">
+        <h3>Master's Thesis (WIP)</h3>
+        <div>
+          <p>
+            Experiments with a modified transformer architecture which uses a cross-attention layer to
+            specify which output(s) to predict at each iteration. This task is more challenging to
+            learn than plain sequence prediction, but the resulting model can be used for "order-independent"
+            autoregressive generative modelling, which I hypothesize is useful useful for tasks that don't
+            have a natural linear order (eg. pixels in an image or joint angles in a skeleton).
+          </p>
+        </div>
+      </section>
+      <section class="indent">
+        <h3>Kal Language</h3>
+        <div>
+          <p>
+            My <a href="https://github.com/maxeonyx/kal">own programming language</a>. It is a dynamic
+            language with an effect
+            system, developed in Rust, with plans to compile to WebAssembly.
+          </p>
+        </div>
+      </section>
+      <section class="indent">
+        <h3>ThisPPL</h3>
+        <div>
+          <p>
+            A <a href="https://github.com/maxeonyx/comp440-probabilistic-programming/tree/main/ppl-impl">custom
+              implementation</a> of the probabilistic programming language described in <a
+              href="https://arxiv.org/abs/1809.10756">Introduction to Probabilistic Programming</a> (van de Meent et al.
+            2018), including an evaluator using a Metropolis-Hastings variant.
+          </p>
+        </div>
+      </section>
+      <section class="indent">
+        <h3>Interpretability experiments</h3>
+        <div>
+          <p>
+            My <a
+              href="https://colab.research.google.com/github/maxeonyx/comp421-project/blob/master/notebook.ipynb">semi-successful
+              attempt</a> at implementing the interpretability techniques from Distill's <a
+              href="https://distill.pub/2017/feature-visualization/">Feature Visualization</a>.
+          </p>
+        </div>
+      </section>
     </div>
   </section>
 
@@ -46,7 +98,7 @@
     <h2>Education</h2>
     <div>
       <section class="indent">
-        <h3>2022</h3>
+        <h3>2020 - Present</h3>
         <div>
           <p>
             <b>Master of Science</b> in Computer Science. <br />Victoria University of Wellington, Wellington,
@@ -55,7 +107,7 @@
         </div>
       </section>
       <section class="indent">
-        <h3>2018</h3>
+        <h3>2015 - 2018</h3>
         <div>
           <p>
             <b>Bachelor of Science</b> in Computer Science. <br />
@@ -104,7 +156,7 @@
     </div>
   </section>
 
-  <section class="gap">
+  <!-- <section class="gap">
     <h2>Extras</h2>
     <div>
       <section class="indent">
@@ -138,11 +190,24 @@
         </div>
       </section>
     </div>
-  </section>
+  </section> -->
 
   <section class="grid gap">
     <h2>Skills</h2>
     <div>
+      <section>
+        <h3>Machine Learning</h3>
+        <div>
+          <p>
+            Python<br />
+            Jupyter<br />
+            Numpy<br />
+            Tensorflow<br />
+            Pytorch<br />
+            Transformers
+          </p>
+        </div>
+      </section>
       <section>
         <h3>Full Stack Web</h3>
         <div>
@@ -157,23 +222,11 @@
         </div>
       </section>
       <section>
-        <h3>Machine Learning</h3>
-        <div>
-          <p>
-            Python<br />
-            Numpy<br />
-            Tensorflow<br />
-            Jupyter<br />
-            Matlab
-          </p>
-        </div>
-      </section>
-      <section>
         <h3>DevOps</h3>
         <div>
           <p>
-            Git<br />
             Kubernetes<br />
+            Git<br />
             Docker<br />
             Linux<br />
             Jenkins<br />
@@ -185,10 +238,10 @@
         <h3>Game Development</h3>
         <div>
           <p>
+            Rust<br />
             Unity<br />
             C#<br />
             Godot<br />
-            Rust<br />
             OpenGL
           </p>
         </div>

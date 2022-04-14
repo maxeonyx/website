@@ -58,6 +58,9 @@ section.grid > div {
   section.grid {
     display: flex;
   }
+  h3 {
+    max-width: 150px;
+  }
 }
 
 section.grid > div {
