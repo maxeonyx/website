@@ -1,4 +1,5 @@
 <sergey-template name="published"><p><i>Published Thu 14 Apr 2022</i></p></sergey-template>
+<sergey-template name="published"><p><i>Last Updated Fri 15 Apr 2022</i></p></sergey-template>
 <sergey-template name="title">Latent: Ideas for a Layer 1 cryptocurrency.</sergey-template>
 <sergey-template name="subtitle">An outside view "efficient markets" / "competitive field" criticism says this idea won't work, but I don't have all the technical reasons why the ideas below are bad.</sergey-template>
 
@@ -15,7 +16,7 @@ There's four aspects to performance, and in order to make a crypto with a succes
 
 ## 1. Latency
 
-Latency is not often discussed in crypto spaces. Here's a little thought experiment that shows that Latency is important for the long-term future of crypto.
+Latency is not often discussed in crypto spaces. Here's a little thought experiment that shows that latency is important for the long-term future of crypto.
 
 You have a crypto wallet on your PC in New York, USA. You would like to send some $$ to your friend in Los Angeles, UK. However, you also have a crypto wallet on Musk Memorial Base, Mars. Light takes on average 20 minutes to travel to Earth from Mars. Before 20 minutes have passed, how can your friend trust your transaction? (How can he know that you haven't already spent the same coins on Mars?)
 
