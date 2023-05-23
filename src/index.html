@@ -21,27 +21,10 @@
   <h1>Maxwell Clarke</h1>
 
   <section class="indent gap">
-    <h2>Background</h2>
     <div>
       <p>
-        I'm a software developer with professional interests in AI Alignment and distributed database systems.
-        I recently completed a Master's thesis in machine learning &mdash; training and applying
-        <a href="https://en.wikipedia.org/wiki/Transformer_(machine_learning_model)">transformer</a>
-        models.
-      </p>
-      <p>
-        In my free time, I enjoy building
-        <a href="https://github.com/maxeonyx/kal">my own programming language</a>
-        using <a href="https://www.rust-lang.org/">Rust</a>, rock climbing, and dabbling in
-        <a href="https://maxeonyx.itch.io/">game development</a> with the
-        <a href="https://godotengine.org/">Godot</a> game engine.
-      </p>
-      <p>
-        I participate in
-        <a href="https://www.effectivealtruism.org/">Effective Altruism</a>, a social movement which asks how
-        we can do the most good for the world with our resources. I aim to use my career to help solve the
-        world's most pressing problems, especially the <a href="https://intelligence.org/stanford-talk/">AI
-          Alignment</a> problem.
+        I'm an engineer with experience in deep learning, full-stack web development, programming language design and
+        game development.
       </p>
     </div>
   </section>
@@ -50,34 +33,32 @@
     <h2>Projects</h2>
     <div>
       <section class="indent">
-        <h3>Master's Thesis</h3>
+        <h3><i>Transformers for Hand Motion Modelling</i><br/>(Master's Thesis)</h3>
         <div>
           <p>
-            Experiments with a modified transformer architecture which uses a cross-attention layer to
-            specify which output(s) to predict at each iteration. This task is more challenging to
-            learn than plain sequence prediction, but the resulting model can be used for "order-independent"
-            autoregressive generative modelling, which I hypothesize is useful for tasks that don't
-            have a natural linear order (eg. pixels in an image or joint angles in a skeleton).
+            My Master's project was to apply transformer models to hand motion modeling. Using a dataset of hand motion capture data, I trained transformer models of
+            varying sizes and configurations to predict pose sequences.
+            <br/>
+            Transformer models have challenges when applied to real-valued and vector data, and
+            I developed expertise here, as well as in Pytorch and Tensorflow.
           </p>
         </div>
       </section>
       <section class="indent">
-        <h3>Kal Language</h3>
+        <h3><i>Kal</i><br/>(Programming Language)</h3>
         <div>
           <p>
-            My <a href="https://github.com/maxeonyx/kal">own programming language</a>. It is a dynamic
-            language with an effect system, developed in Rust, with plans to compile to WebAssembly.
+            My own programming language. It is a dynamic language with an effect system, developed in Rust,
+            with plans to compile to WebAssembly. <a href="https://github.com/maxeonyx/kal">GitHub Link</a>
           </p>
         </div>
       </section>
       <section class="indent">
-        <h3>ThisPPL</h3>
+        <h3><i>ThisPPL</i></h3>
         <div>
           <p>
-            A <a href="https://github.com/maxeonyx/comp440-probabilistic-programming/tree/main/ppl-impl">custom
-              implementation</a> of the probabilistic programming language described in <a
-              href="https://arxiv.org/abs/1809.10756">Introduction to Probabilistic Programming</a> (van de Meent et al.
-            2018), including an evaluator using a Metropolis-Hastings variant.
+            An <a href="https://github.com/maxeonyx/comp440-probabilistic-programming/tree/main/ppl-impl">implementation</a> of the <i>probabilistic programming language</i> in
+            <a href="https://arxiv.org/abs/1809.10756"><i>Introduction to Probabilistic Programming</i></a>.
           </p>
         </div>
       </section>
@@ -85,10 +66,46 @@
         <h3>Interpretability experiments</h3>
         <div>
           <p>
-            My <a
-              href="https://colab.research.google.com/github/maxeonyx/comp421-project/blob/master/notebook.ipynb">attempt</a>
-            at implementing the interpretability techniques from Distill's <a
-              href="https://distill.pub/2017/feature-visualization/">Feature Visualization</a>.
+            <a href="https://colab.research.google.com/github/maxeonyx/comp421-project/blob/master/notebook.ipynb">My implementation</a> of Distill's
+            <a href="https://distill.pub/2017/feature-visualization/"><i>Feature Visualization</i></a>.
+          </p>
+        </div>
+      </section>
+    </div>
+  </section>
+
+  <section class="gap">
+    <h2>Experience</h2>
+    <div>
+      <section class="indent">
+        <h3>2019 - 2020</h3>
+        <div>
+          <p><b>Software Developer</b>, Intranel Consulting, Christchurch, NZ.</p>
+          <p>
+            Intranel is a small consulting company which does bespoke software development. During 2019 and 2020,
+            I worked on: A blockchain data analysis project, a crypto token integration project, and workflow web
+            apps for Ryman Healthcare.
+          </p>
+        </div>
+      </section>
+      <section class="indent">
+        <h3>2017 - 2018</h3>
+        <div>
+          <p><b>Junior Software Developer</b>, Intranel Consulting, Christchurch, NZ.</p>
+          <p>
+            Full-stack web development for Cryptopia, a Christchurch-based cryptocurrency exchange.
+            During their period of rapid growth, I worked on improving their web platform using JavaScript, .NET/C# and SQL Server.
+          </p>
+        </div>
+      </section>
+      <section class="indent">
+        <h3>2015 - 2016</h3>
+        <div>
+          <p><b>Intern Software Developer</b>, Verizon Connect, Christchurch, NZ.</p>
+          <p>
+            Verizon Connect (formerly Telogis) is a US-based Vehicle Telematics provider. I was a full-stack
+            web development intern for the Customer Tools team. I worked full-time during the summer, then
+            continued part time.
           </p>
         </div>
       </section>
@@ -118,80 +135,6 @@
       </section>
     </div>
   </section>
-
-  <section class="gap">
-    <h2>Experience</h2>
-    <div>
-      <section class="indent">
-        <h3>2019 - 2020</h3>
-        <div>
-          <p><b>Software Developer</b>, Intranel Consulting, Christchurch.</p>
-          <p>
-            Intranel is a small consulting company which does bespoke software development. During 2019 and 2020,
-            I worked on: A blockchain data analysis project, a crypto token integration project, workflow web
-            apps for Ryman Healthcare, and a machine learning project for live traffic counting.
-          </p>
-        </div>
-      </section>
-      <section class="indent">
-        <h3>2017 - 2018</h3>
-        <div>
-          <p><b>Junior Software Developer</b>, Intranel Consulting, Christchurch.</p>
-          <p>
-            Full-stack web development for Cryptopia, a Christchurch-based cryptocurrency exchange.
-            During their period of rapid growth, I worked on improving their web platform using JavaScript, .NET/C# and SQL Server.
-          </p>
-        </div>
-      </section>
-      <section class="indent">
-        <h3>2015 - 2016</h3>
-        <div>
-          <p><b>Intern Software Developer</b>, Verizon Connect, Christchurch.</p>
-          <p>
-            Verizon Connect (formerly Telogis) is a US-based Vehicle Telematics provider. I was a full-stack
-            web development intern for the Customer Tools team. I worked full-time during the summer, then
-            continued part time.
-          </p>
-        </div>
-      </section>
-    </div>
-  </section>
-
-  <!-- <section class="gap">
-    <h2>Extras</h2>
-    <div>
-      <section class="indent">
-        <h3>Programming Language</h3>
-        <div>
-          <p>
-            I have developed <b>my own programming language</b>. It is a dynamic language with an effect
-            system, developed in Rust, with plans to compile to WebAssembly. See it
-            <a href="https://github.com/maxeonyx/kal">here</a>.
-          </p>
-        </div>
-      </section>
-      <section class="indent">
-        <h3>Student Exchange</h3>
-        <div>
-          <p>
-            I spent the first half of 2017 in <b>Uppsala, Sweden</b>. I studied there for one semester, then
-            went on a train journey across Europe. It was a great experience, and I look forward to traveling
-            again.
-          </p>
-        </div>
-      </section>
-      <section class="indent">
-        <h3>Scholarship</h3>
-        <div>
-          <p>
-            In 2015 received a <b>UC Engineering Top Scholars' Award</b> to the value of $10,000. This was
-            awarded based on my high-school academic results and my extra-curricular involvement in
-            programming.
-          </p>
-        </div>
-      </section>
-    </div>
-  </section> -->
 
   <section class="grid gap">
     <h2>Skills</h2>
@@ -247,33 +190,62 @@
     </div>
   </section>
 
+  <section class="indent gap">
+    <h2>About Me</h2>
+    <div>
+      <p>
+        I'm a software developer with professional experience in full-stack web development, and research experience
+        in machine learning and AI alignment. I also have non-professional experience in game development,
+        programming language design, and database development. I recently completed a Master's thesis in
+        machine learning &mdash; training and applying
+        <a href="https://en.wikipedia.org/wiki/Transformer_(machine_learning_model)">transformer</a>
+        models.
+      </p>
+      <p>
+        In my free time, I enjoy building
+        <a href="https://github.com/maxeonyx/kal">my own programming language</a>
+        using <a href="https://www.rust-lang.org/">Rust</a>, rock climbing, and dabbling in
+        <a href="https://maxeonyx.itch.io/">game development</a> with the
+        <a href="https://godotengine.org/">Godot</a> game engine.
+      </p>
+      <p>
+        I participate in
+        <a href="https://www.effectivealtruism.org/">Effective Altruism</a>, a social movement which asks how
+        we can do the most good for the world with our resources. I aim to use my career to help solve the
+        world's most pressing problems, especially the <a href="https://intelligence.org/stanford-talk/">AI
+          Alignment</a> problem.
+      </p>
+    </div>
+  </section>
+
   <section class="grid gap">
     <h2>Contact</h2>
     <div class="links">
-      <h3>
+      <p>
         <a href="mailto:maxeonyx@gmail.com">
           <sergey-import src="icons/email.svg" />
           <span>maxeonyx@gmail.com</span>
         </a>
-      </h3>
-      <h3>
+      </p>
+      <p>
         <a href="https://github.com/maxeonyx">
           <sergey-import src="icons/github.svg" />
           <span>github.com/maxeonyx</span>
         </a>
-      </h3>
-      <h3>
+      </p>
+      <p>
         <a href="https://twitter.com/maxeonyx">
           <sergey-import src="icons/twitter.svg" />
           <span>@maxeonyx</span>
         </a>
-      </h3>
-      <h3>
+      </p>
+      <p>
         <a href="https://www.linkedin.com/in/maxwell-clarke/">
           <sergey-import src="icons/linkedin.svg" />
           <span>linkedin.com/in/maxwell-clarke</span>
         </a>
-      </h3>
+      </p>
     </div>
   </section>
+
 </sergey-import>
