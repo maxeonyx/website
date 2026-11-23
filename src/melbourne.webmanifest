@@ -1,0 +1,10 @@
+{
+  "name": "Melbourne Zoo + City",
+  "short_name": "Melbourne day",
+  "description": "Tuesday 24 November — Melbourne zoo and city itinerary",
+  "start_url": "/melbourne.html",
+  "scope": "/melbourne.html",
+  "display": "standalone",
+  "background_color": "#f7f9fa",
+  "theme_color": "#123149"
+}
