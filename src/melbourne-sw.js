@@ -13,8 +13,14 @@ const validResponse = r => r && (r.ok || r.type === 'opaque');
 async function cacheOnline(url) {
   const cache = await caches.open(CACHE);
   const request = new Request(url, { mode: new URL(url, self.location.origin).origin === self.location.origin ? 'same-origin' : 'no-cors', cache:'reload' });
-  const res = await fetch(request);
-  if (validResponse(res)) await cache.put(url, res.clone());
+  const controller = new AbortController();
+  const timeout = setTimeout(() => controller.abort(), 7000);
+  try {
+    const res = await fetch(request, { signal: controller.signal });
+    if (validResponse(res)) await cache.put(url, res.clone());
+  } finally {
+    clearTimeout(timeout);
+  }
 }
 self.addEventListener('install', event => {
   event.waitUntil((async () => {
